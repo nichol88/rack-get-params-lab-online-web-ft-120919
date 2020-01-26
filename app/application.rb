@@ -21,7 +21,7 @@ class Application
       else
         resp.write 'Your cart is empty\n'
       end
-    elsif req.path.match(/add.+/)
+    elsif req.path.match(/add.*/)
       req.params.each do |param_key, param_val|
         binding.pry
         if !@@items.include?(param_val)
