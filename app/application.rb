@@ -21,7 +21,10 @@ class Application
       else
         resp.write 'Your cart is empty\n'
       end
-    elsif res.path.match(/add)
+    elsif res.path.match(/add/)
+      req.params.each do param
+
+      end
     else
       resp.write "Path Not Found"
     end
