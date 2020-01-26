@@ -16,13 +16,15 @@ class Application
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
+
     elsif req.path.match(/cart/)
       if !@@cart.empty?
         @@cart.each{ |e| resp.write("#{e}\n")}
       else
         resp.write 'Your cart is empty\n'
       end
-    elsif req.path.match(/add.*/)
+
+    elsif req.path.match(/add/)
       req.params.each do |param_key, param_val|
         binding.pry
         if !@@items.include?(param_val)
@@ -32,6 +34,7 @@ class Application
           @@cart
         end
       end
+
     else
       resp.write "Path Not Found"
     end
