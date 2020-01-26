@@ -29,7 +29,7 @@ class Application
         binding.pry
         if !@@items.include?(param_val)
           @@cart << req.params[item]
-          resp.write("added #{param_val}")
+          resp.write("added #{req.params['item']}")
         else
           @@cart
         end
