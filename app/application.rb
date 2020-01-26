@@ -31,7 +31,7 @@ class Application
           @@cart << req.params[param_key]
           resp.write("added #{req.params['item']}")
         else
-          @@cart
+          resp.write 'We don't have that item
         end
       end
 
