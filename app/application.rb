@@ -21,7 +21,7 @@ class Application
       else
         resp.write 'Your cart is empty\n'
       end
-    elsif res.path.match(/add/)
+    elsif req.path.match(/add/)
       req.params.each do |key, val|
         if !@@cart.include?(param)
           @@cart[key] = val
