@@ -22,8 +22,8 @@ class Application
         resp.write 'Your cart is empty\n'
       end
     elsif res.path.match(/add/)
-      req.params.each do param
-
+      req.params.each do |param|
+        if @@cart.include?(param)
       end
     else
       resp.write "Path Not Found"
