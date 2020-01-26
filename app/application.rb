@@ -23,8 +23,8 @@ class Application
       end
     elsif req.path.match(/add/)
       req.params.each do |param_key, param_val|
-        if !@@items.include?(val)
-          @@cart << val
+        if !@@items.include?(param_val)
+          @@cart << param_val
           resp.write("added #{key}")
         else
           @@cart
