@@ -24,6 +24,7 @@ class Application
     elsif res.path.match(/add/)
       req.params.each do |param|
         if @@cart.include?(param)
+          @@cart << param
       end
     else
       resp.write "Path Not Found"
