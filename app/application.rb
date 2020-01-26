@@ -22,7 +22,7 @@ class Application
         resp.write 'Your cart is empty\n'
       end
     elsif req.path.match(/add/)
-      req.params.each do |key, val|
+      req.params.each do |val|
         if !@@items.include?(val)
           @@cart << val
           resp.write("added #{val}")
