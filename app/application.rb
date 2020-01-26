@@ -16,7 +16,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
       if !@@cart.empty?
-        resp.write @@cart
+        @@cart.each{ |e| resp.write(e)}
       else
         resp.write 'Cart is empty!'
       end
