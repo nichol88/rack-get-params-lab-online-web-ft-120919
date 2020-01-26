@@ -23,7 +23,7 @@ class Application
       end
     elsif res.path.match(/add/)
       req.params.each do |key, val|
-        if @@cart.include?(param)
+        if !@@cart.include?(param)
           @@cart[key] = val
         else
         end
