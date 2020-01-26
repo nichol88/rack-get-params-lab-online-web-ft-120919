@@ -26,7 +26,7 @@ class Application
 
     elsif req.path.match(/add/)
       req.params.each do |param_key, param_val|
-        binding.pry
+        #binding.pry
         if !@@items.include?(param_val)
           @@cart << req.params[item]
           resp.write("added #{req.params['item']}")
