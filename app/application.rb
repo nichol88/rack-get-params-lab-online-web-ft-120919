@@ -27,7 +27,7 @@ class Application
           @@cart[key] = val
           resp.write("added #{val}")
         else
-          @@
+          @@cart
         end
       end
     else
