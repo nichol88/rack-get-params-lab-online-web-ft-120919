@@ -28,7 +28,7 @@ class Application
       req.params.each do |param_key, param_val|
         #binding.pry
         if !@@items.include?(param_val)
-          @@cart << req.params[item]
+          @@cart << req.params[param_key]
           resp.write("added #{req.params['item']}")
         else
           @@cart
