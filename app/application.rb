@@ -25,7 +25,9 @@ class Application
       req.params.each do |key, val|
         if !@@cart.include?(param)
           @@cart[key] = val
+          resp.write("added #{val}")
         else
+          @@
         end
       end
     else
